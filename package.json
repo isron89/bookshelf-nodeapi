@@ -1,7 +1,7 @@
 {
-  "name": "notes-app-web-server",
+  "name": "bookshelf-nodeapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Submission Dicoding",
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
@@ -10,19 +10,22 @@
     "lint": "eslint ./src"
   },
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+  "nodejs",
+  "restapi"
+  ],
+  "author": "Isrunn",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.0",
     "nodemon": "^2.0.7"
   },
   "dependencies": {
-    "@hapi/hapi": "^20.1.2",
-    "nanoid": "^3.1.22"
+    "@hapi/hapi": "^20.2.1",
+    "nanoid": "^3.3.1"
   }
 }

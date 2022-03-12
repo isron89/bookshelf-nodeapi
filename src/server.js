@@ -1,14 +1,11 @@
 const Hapi = require('@hapi/hapi');
-// files
+
 const routes = require('./routes');
 
 const init = async () => {
   const server = Hapi.server({
     port: 5000,
-    host:
-      process.env.NODE_ENV === 'development'
-        ? 'localhost'
-        : 'dicoding-bookshelf.herokuapp.com',
+    host: 'localhost',
     routes: {
       cors: {
         origin: ['*'],
@@ -19,7 +16,7 @@ const init = async () => {
   server.route(routes);
 
   await server.start();
-  console.log(`Server berjalan pada ${server.info.uri}`);
+  console.log(`Server on ${server.info.uri}`);
 };
 
 init();

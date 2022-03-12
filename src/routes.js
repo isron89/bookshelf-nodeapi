@@ -1,41 +1,41 @@
 const {
-  addBookHandler,
-  getAllBooksHandler,
-  getBookByIdHandler,
-  editBookByIdHandler,
-  deleteBookByIdHandler,
+  addBuku,
+  getSemuaBuku,
+  getBuku,
+  editBuku,
+  deleteBuku,
 } = require('./handler');
 
 const routes = [
   {
     method: 'POST',
-    path: '/books',
-    handler: addBookHandler,
+    path: '/buku',
+    handler: addBuku,
   },
   {
     method: 'GET',
-    path: '/books',
-    handler: getAllBooksHandler,
+    path: '/buku',
+    handler: getSemuaBuku,
   },
   {
     method: 'GET',
-    path: '/books/{bookId}',
-    handler: getBookByIdHandler,
+    path: '/buku/{bookId}',
+    handler: getBuku,
   },
   {
     method: 'PUT',
-    path: '/books/{bookId}',
-    handler: editBookByIdHandler,
+    path: '/buku/{bookId}',
+    handler: editBuku,
   },
   {
     method: 'DELETE',
-    path: '/books/{bookId}',
-    handler: deleteBookByIdHandler,
+    path: '/buku/{bookId}',
+    handler: deleteBuku,
   },
   {
     method: '*',
     path: '/{any*}',
-    handler: () => 'Halaman tidak ditemukan',
+    handler: () => 'Oops! Halaman kosong',
   },
 ];
 
